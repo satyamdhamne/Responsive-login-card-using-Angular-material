@@ -1,0 +1,32 @@
+<div class="container">
+<mat-card class="example-card">
+    <mat-card-header class="ln-title">
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p class="wlcm-msg">Welcome to Ecom.com</p>
+      <div class="example-container">
+        <mat-form-field class="email">
+          <mat-label>Enter your email</mat-label>
+          <input matInput
+                 placeholder="pat@example.com"
+                 >
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+      </div>
+      
+    </mat-card-content>
+    <mat-card-actions class="actions">
+        <button mat-raised-button color="primary">Log In</button>
+    </mat-card-actions>
+    <mat-card-footer class="footer"> 
+        Didn't You have an account ? <a href="http://google.com" target="_blank" rel="noopener noreferrer">Register</a>
+    </mat-card-footer>
+  </mat-card>
+  </div>
